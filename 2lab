@@ -1,0 +1,25 @@
+1a
+select * from course where credits >3;
+select * from course;
+
+--1b
+select * from classroom where building='Watson' or building='Packard';
+
+--1c
+select * from course where dept_name='Comp. Sci.';
+
+--1d
+select course.course_id,title,dept_name,credits,semester
+from course,section where course.course_id=section.course_id
+and section.semester='Fall';
+
+--1e
+select * from student where tot_cred<90 and tot_cred>45;
+
+--1f
+select * from student where student.name ~*'[aeiuoy]$';
+
+--1g
+select course.course_id,title,dept_name,credits from course,prereq where prereq.course_id = course.course_id and prereq_id = 'CS-101';
+
+--2a
